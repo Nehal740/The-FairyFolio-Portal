@@ -1,0 +1,30 @@
+:root{--sage:#A9AD92;--cream:#FBEAB2;--peach:#FAC68A;--blush:#F2ABAF;--rose:#D5799E;--pur:#9275A5;--ink:#2b2433;--bg:#fffaf1;--mut:#6d6577;--ok:#2f6f45;--warn:#9a5a00;--bad:#a82a55;--line:#eadfd0}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 "Trebuchet MS","Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3,h4{font-family:Georgia,"Palatino Linotype",serif;margin:0 0 .4em;font-weight:700}h2{font-size:1.7rem}h4{font-size:1rem}
+#app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}
+aside{background:linear-gradient(170deg,#6f5780,var(--pur) 60%,var(--rose));color:#fff;padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+aside .brand{display:flex;align-items:center;gap:10px;font:700 1.15rem Georgia,serif;margin-bottom:14px}aside .brand img{width:52px;height:52px;background:#fff;border-radius:50%;object-fit:contain}
+aside button.nav{all:unset;cursor:pointer;padding:10px 12px;border-radius:10px;color:#fff}aside button.nav:hover{background:#ffffff26}aside button.nav.on{background:var(--cream);color:var(--ink);font-weight:700}
+aside .who{margin-top:auto;font-size:.85rem;border-top:1px solid #ffffff55;padding-top:12px}
+main{padding:28px clamp(16px,4vw,44px);max-width:1150px;width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}.grid .card{margin:0}
+.hero{background:linear-gradient(120deg,var(--cream),var(--peach) 55%,var(--blush));border:0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.hero .big{font:700 2.4rem Georgia,serif}
+.btn{border:0;border-radius:10px;background:var(--pur);color:#fff;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer}.btn:hover{background:#7b5f8d}.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.warn{background:var(--warn)}.btn.ghost{background:#fff;color:var(--pur);border:1px solid var(--pur)}.btn.sm{padding:4px 10px;font-size:.85rem}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.8rem;font-weight:700;border:1px solid}
+.badge.ok{color:var(--ok);background:#e4f3e8;border-color:var(--ok)}.badge.bad{color:var(--bad);background:#fde6ee;border-color:var(--bad)}.badge.warn{color:var(--warn);background:#fff0d6;border-color:var(--warn)}.badge.info{color:#5b4570;background:#efe6f5;border-color:var(--pur)}
+.banner{padding:12px 16px;border-radius:12px;margin-bottom:14px;font-weight:700}.banner.bad{background:#fde6ee;border:2px solid var(--bad);color:var(--bad)}
+.tm{font:700 1.5rem Georgia,serif}.tm.over{color:var(--bad)}.mut{color:var(--mut)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:.9rem}th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--cream)}
+.scroll{overflow-x:auto}
+input,select,textarea{font:inherit;padding:8px 10px;border:1px solid #cdbfae;border-radius:8px;width:100%;background:#fff}label{display:block;font-weight:700;margin:10px 0 3px;font-size:.88rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}.row>*{flex:1;min-width:140px}
+.login{grid-column:1/-1;display:grid;place-items:center;background:radial-gradient(circle at 20% 20%,var(--cream),transparent 50%),radial-gradient(circle at 85% 80%,var(--blush),transparent 50%),var(--bg);padding:20px}
+.login .card{max-width:420px;width:100%;text-align:center;padding:26px}.login img{width:150px}.login form{text-align:left}.demo{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+#toast{position:fixed;bottom:18px;right:18px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.3s;pointer-events:none;max-width:320px}#toast.on{opacity:1}
+dialog{border:0;border-radius:16px;max-width:600px;width:92%;padding:22px}dialog::backdrop{background:#2b243399}
+@media(max-width:800px){#app{grid-template-columns:1fr}aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}aside .brand{width:100%;margin:0}aside .who{width:100%;margin:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
